@@ -10,6 +10,6 @@ public class KesU implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        LOGGER.info("The worst mod of all time has now started.");
+        LOGGER.info("The Best mod of all time has now started.");
     }
 }
