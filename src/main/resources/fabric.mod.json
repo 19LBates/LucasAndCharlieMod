@@ -11,13 +11,13 @@
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "com.evil.kesore.client.KesUDataGenerator"
+      "com.evil.kesu.client.KesUDataGenerator"
     ],
     "client": [
-      "com.evil.kesore.client.KesUClient"
+      "com.evil.kesu.client.KesUClient"
     ],
     "main": [
-      "com.evil.kesore.KesU"
+      "com.evil.kesu.KesU"
     ]
   },
   "mixins": [

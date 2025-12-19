@@ -1,11 +1,15 @@
 package com.evil.kesu;
 
 import net.fabricmc.api.ModInitializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class KesU implements ModInitializer {
 
+    public static final Logger LOGGER = LoggerFactory.getLogger("kesu");
+
     @Override
     public void onInitialize() {
-        //Test thing
+        LOGGER.info("The worst mod of all time has now started.");
     }
 }
