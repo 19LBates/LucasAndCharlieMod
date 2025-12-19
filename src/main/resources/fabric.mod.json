@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "kesu",
+  "version": "${version}",
+  "name": "KES Unemployee Mod",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/kesu/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.evil.kesore.client.KesUDataGenerator"
+    ],
+    "client": [
+      "com.evil.kesore.client.KesUClient"
+    ],
+    "main": [
+      "com.evil.kesore.KesU"
+    ]
+  },
+  "mixins": [
+    "kesu.mixins.json",
+    {
+      "config": "kesu.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
