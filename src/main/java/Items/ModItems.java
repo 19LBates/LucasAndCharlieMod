@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
     public static Item KES_INGOT;
+    public static Item RAW_KES;
 
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(KesU.MOD_ID, name);
@@ -19,9 +20,12 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-    KES_INGOT = registerItem("kes_ingot");
+        KES_INGOT = registerItem("kes_ingot");
+        RAW_KES = registerItem("raw_kes");
 
-    ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
-            .register(entries -> entries.add(KES_INGOT));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.add(KES_INGOT);
+            entries.add(RAW_KES);
+        });
     }
 }
