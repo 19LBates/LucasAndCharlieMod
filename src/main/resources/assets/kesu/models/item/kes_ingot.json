@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generate",
+  "textures": {
+    "layer0": "kesu:item/kes_ingot"
+  }
+}
