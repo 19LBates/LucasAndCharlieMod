@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": "kesu:raw_kes"
+  },
+  "result": {
+    "id": "kesu:raw_kes_block",
+    "count": 1
+  }
+}

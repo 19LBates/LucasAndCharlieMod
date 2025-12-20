@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "kesu:block/raw_kes_block"
+    }
+  }
+}

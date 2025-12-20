@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "kesu:block/kes_block_top",
+    "bottom": "kesu:block/kes_block_bottom",
+    "side": "kesu:block/kes_block_side"
+  }
+}

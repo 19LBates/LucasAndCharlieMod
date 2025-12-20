@@ -12,6 +12,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
@@ -19,7 +20,8 @@ import java.util.function.Function;
 public class ModBlocks {
 
     public static Block KES_ORE;
-    private static BlockItem kes_ore_item;
+    public static Block KES_BLOCK;
+    public static Block RAW_KES_BLOCK;
 
     private static Block register(RegistryKey<Block> key, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = (Block)factory.apply(settings.registryKey(key));
@@ -52,10 +54,19 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         KES_ORE = register("kes_ore", AbstractBlock.Settings.create().mapColor(MapColor.STONE_GRAY).requiresTool().strength(50f, 1200f));
-        kes_ore_item = registerBlockItem(keyOf("kes_ore"), KES_ORE);
+        KES_BLOCK = register("kes_block", AbstractBlock.Settings.create().mapColor(MapColor.GOLD).requiresTool().strength(100f, 2400f).sounds(BlockSoundGroup.IRON));
+        RAW_KES_BLOCK = register("raw_kes_block", AbstractBlock.Settings.create().mapColor(MapColor.LAPIS_BLUE).requiresTool().strength(75f, 1800f).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+        BlockItem kes_ore_item = registerBlockItem(keyOf("kes_ore"), KES_ORE);
+        BlockItem kes_block_item = registerBlockItem(keyOf("kes_block"), KES_BLOCK);
+        BlockItem raw_kes_block_item = registerBlockItem(keyOf("raw_kes_block"), RAW_KES_BLOCK);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.add(kes_ore_item);
+            entries.add(raw_kes_block_item);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+            entries.add(kes_block_item);
         });
     }
 
