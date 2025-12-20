@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "kesu:raw_kes",
+  "result": {
+    "id": "kesu:kes_ingot"
+  },
+  "experience": 10.0,
+  "cookingtime": 200
+}
