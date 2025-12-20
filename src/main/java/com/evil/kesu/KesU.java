@@ -1,5 +1,6 @@
 package com.evil.kesu;
 
+import Block.ModBlocks;
 import Items.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -13,7 +14,7 @@ public class KesU implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("The Best mod of all time has now started.");
-
+        ModBlocks.registerModBlocks();
         ModItems.registerModItems();
     }
 }

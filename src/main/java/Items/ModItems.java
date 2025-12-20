@@ -16,7 +16,7 @@ public class ModItems {
 
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(KesU.MOD_ID, name);
-        return Registry.register(Registries.ITEM, id, new Item( new Item.Settings().registryKey(RegistryKey.of(Registries.ITEM.getKey(), id))));
+        return Registry.register(Registries.ITEM, id, new Item(new Item.Settings().registryKey(RegistryKey.of(Registries.ITEM.getKey(), id))));
     }
 
     public static void registerModItems() {
