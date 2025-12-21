@@ -1,11 +1,17 @@
 {
   "item.kesu.kes_ingot": "KES Ingot",
   "item.kesu.raw_kes": "Raw KES",
+
   "item.kesu.kes_sword" : "KES Sword",
   "item.kesu.kes_pickaxe" : "KES Pickaxe",
   "item.kesu.kes_axe" : "KES Axe",
   "item.kesu.kes_shovel" : "KES Shovel",
   "item.kesu.kes_hoe" : "Ryan Taylor",
+
+  "item.kesu.kes_helmet" : "KES Crown",
+  "item.kesu.kes_chestplate" : "KES Rugby Shirt",
+  "item.kesu.kes_leggings" : "KES Shorts",
+  "item.kesu.kes_boots" : "KES Thigh-High Socks",
 
   "item.kesu.kes_ore": "KES Ore",
   "item.kesu.kes_block": "Block of KES",

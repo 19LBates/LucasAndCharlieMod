@@ -2,6 +2,7 @@ package com.evil.kesu;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -18,6 +19,11 @@ public class ModItems {
     public static Item KES_SHOVEL;
     public static Item KES_HOE;
 
+    public static Item KES_HELMET;
+    public static Item KES_CHESTPLATE;
+    public static Item KES_LEGGINGS;
+    public static Item KES_BOOTS;
+
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(KesU.MOD_ID, name);
         return Registry.register(Registries.ITEM, id, new Item(new Item.Settings().registryKey(RegistryKey.of(Registries.ITEM.getKey(), id))));
@@ -32,7 +38,6 @@ public class ModItems {
         KES_INGOT = registerItem("kes_ingot");
         RAW_KES = registerItem("raw_kes");
 
-        // Use full class names without importing
         Identifier kesSwordId = Identifier.of(KesU.MOD_ID, "kes_sword");
         KES_SWORD = registerItem("kes_sword", new Item(
                 new Item.Settings().sword(ModToolMaterials.KES, 5, -2.4f)
@@ -58,6 +63,26 @@ public class ModItems {
                 new Item.Settings()
                         .registryKey(RegistryKey.of(Registries.ITEM.getKey(), kesHoeId))));
 
+        Identifier kesHelmetId = Identifier.of(KesU.MOD_ID, "kes_helmet");
+        KES_HELMET = registerItem("kes_helmet", new Item(
+                new Item.Settings().armor(ModArmorMaterials.KES, EquipmentType.HELMET)
+                        .registryKey(RegistryKey.of(Registries.ITEM.getKey(), kesHelmetId))));
+
+        Identifier kesChestplateId = Identifier.of(KesU.MOD_ID, "kes_chestplate");
+        KES_CHESTPLATE= registerItem("kes_chestplate", new Item(
+                new Item.Settings().armor(ModArmorMaterials.KES, EquipmentType.CHESTPLATE)
+                        .registryKey(RegistryKey.of(Registries.ITEM.getKey(), kesChestplateId))));
+
+        Identifier kesLeggingsId = Identifier.of(KesU.MOD_ID, "kes_leggings");
+        KES_LEGGINGS = registerItem("kes_leggings", new Item(
+                new Item.Settings().armor(ModArmorMaterials.KES, EquipmentType.LEGGINGS)
+                        .registryKey(RegistryKey.of(Registries.ITEM.getKey(), kesLeggingsId))));
+
+        Identifier kesBootsId = Identifier.of(KesU.MOD_ID, "kes_boots");
+        KES_BOOTS = registerItem("kes_boots", new Item(
+                new Item.Settings().armor(ModArmorMaterials.KES, EquipmentType.BOOTS)
+                        .registryKey(RegistryKey.of(Registries.ITEM.getKey(), kesBootsId))));
+
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(KES_INGOT);
             entries.add(RAW_KES);
@@ -66,6 +91,10 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(KES_SWORD);
             entries.add(KES_AXE);
+            entries.add(KES_HELMET);
+            entries.add(KES_CHESTPLATE);
+            entries.add(KES_LEGGINGS);
+            entries.add(KES_BOOTS);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {

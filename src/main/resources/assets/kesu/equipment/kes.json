@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "kesu:kes"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "kesu:kes"
+      }
+    ]
+  }
+}
