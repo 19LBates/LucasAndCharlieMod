@@ -52,9 +52,9 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        KES_ORE = register("kes_ore", AbstractBlock.Settings.create().mapColor(MapColor.STONE_GRAY).requiresTool().strength(50f, 1200f));
-        KES_BLOCK = register("kes_block", AbstractBlock.Settings.create().mapColor(MapColor.GOLD).requiresTool().strength(100f, 2400f).sounds(BlockSoundGroup.IRON));
-        RAW_KES_BLOCK = register("raw_kes_block", AbstractBlock.Settings.create().mapColor(MapColor.LAPIS_BLUE).requiresTool().strength(75f, 1800f).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+        KES_ORE = register("kes_ore", AbstractBlock.Settings.create().mapColor(MapColor.STONE_GRAY).requiresTool().strength(25f, 1200f));
+        KES_BLOCK = register("kes_block", AbstractBlock.Settings.create().mapColor(MapColor.GOLD).requiresTool().strength(50f, 1200f).sounds(BlockSoundGroup.IRON));
+        RAW_KES_BLOCK = register("raw_kes_block", AbstractBlock.Settings.create().mapColor(MapColor.LAPIS_BLUE).requiresTool().strength(50f, 1200f).sounds(BlockSoundGroup.AMETHYST_BLOCK));
         BlockItem kes_ore_item = registerBlockItem(keyOf("kes_ore"), KES_ORE);
         BlockItem kes_block_item = registerBlockItem(keyOf("kes_block"), KES_BLOCK);
         BlockItem raw_kes_block_item = registerBlockItem(keyOf("raw_kes_block"), RAW_KES_BLOCK);
