@@ -45,7 +45,6 @@ public class ModBlocks {
     }
 
     private static BlockItem registerBlockItem(RegistryKey<Block> key, Block block) {
-        // Register the BlockItem for this block
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, key.getValue());
         BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey));
         Registry.register(Registries.ITEM, itemKey, blockItem);

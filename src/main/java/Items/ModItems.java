@@ -2,11 +2,7 @@ package Items;
 
 import com.evil.kesu.KesU;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ShovelItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -39,17 +35,17 @@ public class ModItems {
 
         // Use full class names without importing
         Identifier kesSwordId = Identifier.of(KesU.MOD_ID, "kes_sword");
-        KES_SWORD = registerItem("kes_sword", new net.minecraft.item.SwordItem(ModToolMaterials.KES, 5, -2.4F,
-                new Item.Settings()
+        KES_SWORD = registerItem("kes_sword", new Item(
+                new Item.Settings().sword(ModToolMaterials.KES, 5, -2.4f)
                         .registryKey(RegistryKey.of(Registries.ITEM.getKey(), kesSwordId))));
 
         Identifier kesPickaxeId = Identifier.of(KesU.MOD_ID, "kes_pickaxe");
-        KES_PICKAXE = registerItem("kes_pickaxe", new net.minecraft.item.PickaxeItem(ModToolMaterials.KES, 1, -2.8F,
-                new Item.Settings()
+        KES_PICKAXE = registerItem("kes_pickaxe", new Item(
+                new Item.Settings().pickaxe(ModToolMaterials.KES, 1, -2.8F)
                         .registryKey(RegistryKey.of(Registries.ITEM.getKey(), kesPickaxeId))));
 
         Identifier kesAxeId = Identifier.of(KesU.MOD_ID, "kes_axe");
-        KES_AXE = registerItem("kes_axe", new AxeItem(ModToolMaterials.KES, 6, -3.1F,
+        KES_AXE = registerItem("kes_axe", new AxeItem(ModToolMaterials.KES, 9, -3.1F,
                 new Item.Settings()
                         .registryKey(RegistryKey.of(Registries.ITEM.getKey(), kesAxeId))));
 
