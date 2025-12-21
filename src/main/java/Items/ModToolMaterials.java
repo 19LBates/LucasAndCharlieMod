@@ -15,11 +15,10 @@ public class ModToolMaterials {
             Identifier.of(KesU.MOD_ID, "repairs_kes_tools")
     );
 
-
     public static final ToolMaterial KES = new ToolMaterial(
-            BlockTags.INCORRECT_FOR_DIAMOND_TOOL,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             3000,
-            12.0F,
+            39.0F,
             5.0F,
             30,
             REPAIRS_KES_TOOLS
