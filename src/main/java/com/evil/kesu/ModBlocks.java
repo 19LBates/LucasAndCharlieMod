@@ -1,6 +1,5 @@
-package Block;
+package com.evil.kesu;
 
-import com.evil.kesu.KesU;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
