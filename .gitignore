@@ -2,6 +2,3 @@
 /.idea/
 /build/
 /run/
-!/run/
-!/run/saves/
-!/run/saves/**
