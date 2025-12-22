@@ -1,5 +1,6 @@
-package com.evil.kesu;
+package com.evil.kesu.items;
 
+import com.evil.kesu.KesU;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;

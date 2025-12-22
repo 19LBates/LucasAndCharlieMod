@@ -1,5 +1,7 @@
 package com.evil.kesu;
 
+import com.evil.kesu.blocks.ModBlocks;
+import com.evil.kesu.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

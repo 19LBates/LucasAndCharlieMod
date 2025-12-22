@@ -1,5 +1,6 @@
-package com.evil.kesu;
+package com.evil.kesu.items;
 
+import com.evil.kesu.KesU;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
