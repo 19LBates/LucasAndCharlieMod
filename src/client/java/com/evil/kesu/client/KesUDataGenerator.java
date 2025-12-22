@@ -9,5 +9,6 @@ public class KesUDataGenerator implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(KesUModelProvider::new);
+        pack.addProvider(KesUTagProvider::new);
     }
 }
