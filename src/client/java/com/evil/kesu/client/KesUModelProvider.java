@@ -1,6 +1,7 @@
 package com.evil.kesu.client;
 
 import com.evil.kesu.blocks.ModBlocks;
+import com.evil.kesu.items.ModArmorMaterials;
 import com.evil.kesu.items.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -26,14 +27,16 @@ public class KesUModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.KES_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_KES, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.KES_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KES_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KES_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KES_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KES_HOE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.KES_HELMET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.KES_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.KES_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.KES_BOOTS, Models.GENERATED);
+
+        itemModelGenerator.registerArmor(ModItems.KES_HELMET, ModArmorMaterials.KES_ARMOR_MATERIAL_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.KES_CHESTPLATE, ModArmorMaterials.KES_ARMOR_MATERIAL_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.KES_LEGGINGS, ModArmorMaterials.KES_ARMOR_MATERIAL_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.KES_BOOTS, ModArmorMaterials.KES_ARMOR_MATERIAL_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
     }
 }
