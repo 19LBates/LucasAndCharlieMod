@@ -1,11 +1,13 @@
 package com.evil.kesu.client;
 
+import com.evil.kesu.blocks.ModBlocks;
 import com.evil.kesu.items.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
+import net.minecraft.client.data.TexturedModel;
 
 public class KesUModelProvider extends FabricModelProvider {
 
@@ -15,6 +17,9 @@ public class KesUModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KES_ORE);
+        blockStateModelGenerator.registerSingleton(ModBlocks.KES_BLOCK, TexturedModel.CUBE_BOTTOM_TOP);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_KES_BLOCK);
     }
 
     @Override
