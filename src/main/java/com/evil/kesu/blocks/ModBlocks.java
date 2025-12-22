@@ -22,6 +22,7 @@ public class ModBlocks {
     public static Block KES_ORE;
     public static Block KES_BLOCK;
     public static Block RAW_KES_BLOCK;
+    public static Block DEEPSLATE_KES_ORE;
 
     private static Block register(RegistryKey<Block> key, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = (Block)factory.apply(settings.registryKey(key));
@@ -55,13 +56,16 @@ public class ModBlocks {
         KES_ORE = register("kes_ore", AbstractBlock.Settings.create().mapColor(MapColor.STONE_GRAY).requiresTool().strength(25f, 1200f));
         KES_BLOCK = register("kes_block.json", AbstractBlock.Settings.create().mapColor(MapColor.GOLD).requiresTool().strength(50f, 1200f).sounds(BlockSoundGroup.IRON));
         RAW_KES_BLOCK = register("raw_kes_block", AbstractBlock.Settings.create().mapColor(MapColor.LAPIS_BLUE).requiresTool().strength(50f, 1200f).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+        DEEPSLATE_KES_ORE = register("deepslate_kes_ore", AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).requiresTool().strength(50f, 1200f).sounds(BlockSoundGroup.AMETHYST_BLOCK));
         BlockItem kes_ore_item = registerBlockItem(keyOf("kes_ore"), KES_ORE);
         BlockItem kes_block_item = registerBlockItem(keyOf("kes_block.json"), KES_BLOCK);
         BlockItem raw_kes_block_item = registerBlockItem(keyOf("raw_kes_block"), RAW_KES_BLOCK);
+        BlockItem deepslate_kes_ore_item = registerBlockItem(keyOf("deepslate_kes_ore"), DEEPSLATE_KES_ORE);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.add(kes_ore_item);
             entries.add(raw_kes_block_item);
+            entries.add(deepslate_kes_ore_item);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {

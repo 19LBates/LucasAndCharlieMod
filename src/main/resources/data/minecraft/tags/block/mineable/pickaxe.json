@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "kesu:kes_ore"
+    "kesu:kes_ore",
+    "kesu:deepslate_kes_ore",
+    "kesu:raw_kes_block",
+    "kesu:kes_block"
   ]
 }
