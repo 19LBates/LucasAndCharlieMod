@@ -21,6 +21,7 @@ public class KesUModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KES_ORE);
         blockStateModelGenerator.registerSingleton(ModBlocks.KES_BLOCK, TexturedModel.CUBE_BOTTOM_TOP);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_KES_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_KES_ORE);
     }
 
     @Override
