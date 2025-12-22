@@ -15,5 +15,6 @@
 
   "item.kesu.kes_ore": "KES Ore",
   "item.kesu.kes_block": "Block of KES",
-  "item.kesu.raw_kes_block": "Block of Raw KES"
+  "item.kesu.raw_kes_block": "Block of Raw KES",
+  "item.kesu.deepslate_kes_ore" : "Deepslate KES Ore"
 }

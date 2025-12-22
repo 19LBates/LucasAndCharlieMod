@@ -18,7 +18,6 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> KES_ORE_KEY = registerKey("kes_ore");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> DEEPSLATE_KES_ORE_KEY = registerKey("deepslate_kes_ore");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -27,6 +26,8 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> overworldKesOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.KES_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_KES_ORE.getDefaultState()));
+
+        register(context, KES_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldKesOres, 3));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
