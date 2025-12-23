@@ -45,7 +45,8 @@ public class MantisEntity extends AnimalEntity {
                 .add(EntityAttributes.MAX_HEALTH, 18)
                 .add(EntityAttributes.MOVEMENT_SPEED, 0.35)
                 .add(EntityAttributes.ATTACK_DAMAGE, 1)
-                .add(EntityAttributes.FOLLOW_RANGE, 20);
+                .add(EntityAttributes.FOLLOW_RANGE, 20)
+                .add(EntityAttributes.TEMPT_RANGE, 7);
     }
 
     private void setupAnimationStates() {
@@ -64,6 +65,10 @@ public class MantisEntity extends AnimalEntity {
         if (this.getEntityWorld().isClient()) {
             this.setupAnimationStates();
         }
+    }
+
+    public MantisVariant getVariant() {
+        return MantisVariant.byId(0);
     }
 
     @Override
