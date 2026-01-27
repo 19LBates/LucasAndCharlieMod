@@ -42,9 +42,9 @@ public class MantisEntity extends AnimalEntity {
 
     public static DefaultAttributeContainer.Builder createAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.MAX_HEALTH, 18)
+                .add(EntityAttributes.MAX_HEALTH, 0.01)
                 .add(EntityAttributes.MOVEMENT_SPEED, 0.35)
-                .add(EntityAttributes.ATTACK_DAMAGE, 1)
+                .add(EntityAttributes.ATTACK_DAMAGE, 0.01)
                 .add(EntityAttributes.FOLLOW_RANGE, 20)
                 .add(EntityAttributes.TEMPT_RANGE, 7);
     }
@@ -80,4 +80,5 @@ public class MantisEntity extends AnimalEntity {
     @Override
     public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
         return ModEntities.MANTIS.create(world, net.minecraft.entity.SpawnReason.BREEDING);
-    }}
+    }
+}
